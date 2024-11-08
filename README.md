@@ -14,3 +14,42 @@ Technologies Used
 - MakeCode Arcade
 
 Features 
+- Different objects fly into the screen at random locations and times
+- Your score increases or decreases depending on what object you collect
+- A sound is played when you collect objects
+
+Screenshot
+<img width="1289" alt="Screenshot 2024-11-08 at 9 03 22 pm" src="https://github.com/user-attachments/assets/686078ce-5b32-4e27-9530-e1dfb0062419">
+
+Setup
+
+Once the game as loaded, objects will start spawning into the screen and that is when the game is ready to be played. Once you open up the game you have to be read and objects will start spwaning almost instantly.
+
+Usage
+
+The game is played online using your arrow keys to control the character. Or if you are playing with the physical Microsoft game kit, then you will use the controllers on the left. 
+
+on_on_overlap(sprite, otherSprite):
+    sprites.destroy(otherSprite)
+
+music.play(music.melody_playable(music.ba_ding),
+        music.PlaybackMode.IN_BACKGROUND)
+
+shell.set_position(randint(0, scene.screen_width()),
+        randint(0, scene.screen_height()))
+    shell.set_velocity(0, 50)
+    shell.set_bounce_on_wall(True)
+
+Project Status
+
+Complete
+
+Room for Improvement
+- As I changed my coding and added more features, my original code began to glitch. This could be fixed and improved however I was unable to figure out how to do this without removing the features I was adding.
+- Have the background move around to add more effects.
+- Bombs to spawn from random locations.
+- Character to start from the middle of the screen and seemingly move around (this was one of the glitches I came across when I added other codes into my game).
+
+Acknowledgements
+- This project was inspired by the beach and the fruit ninja game from my childhood. 
+- This project was based on the week 5 tutorial. https://canvas.uts.edu.au/courses/33108/pages/week-05?module_item_id=1822515
